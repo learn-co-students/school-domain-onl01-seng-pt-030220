@@ -8,13 +8,6 @@ def initialize(name)
    @roster={}
 end
 
-#def roster=(roster)
-  #@roster ={}
-#end
-#def roster
-  #@roster
-#end
-
 def add_student(student_name, grade)
   roster[grade] ||= []   # ||= if roster[grade] already  has  a value leave it not change ,if not equal it to empty array =[]
   roster[grade] << student_name
