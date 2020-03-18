@@ -2,14 +2,20 @@ require 'spec_helper'
 
 describe 'School' do
   before :each do
-    @school = School.new("Test School")
+    @school = School.new("Teddington School")
   end
 
   describe "::new" do
     it 'has an empty roster when initialized' do
       expect(@school.roster.length).to eq(0)
     end
+
+    it 'has a name upon initializing' do
+      expect(@school.name).to eq("Teddington School")
+    end 
   end
+
+
 
   describe "#add_student" do
     it 'is able to add a student' do
