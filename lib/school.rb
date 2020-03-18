@@ -10,7 +10,7 @@ end
 
 def add_student(student_name, grade)
   roster[grade] ||= []   # ||= if  roster[grade] not exist nil or false(it means it's first item ),then we equal it to array .when we add second items ,array
-                         #already exist ,so not do anything 
+                         #already has value ,so not do anything .
   roster[grade] << student_name
 end
 
