@@ -29,7 +29,3 @@ class School
   end
 
 end
-
-
-
-# roster should be empty hash,
