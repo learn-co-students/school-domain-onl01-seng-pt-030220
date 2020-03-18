@@ -1,31 +1,31 @@
 require 'pry'
 
 class School
+  
+  attr_accessor  :name, :roster
+
 
   def initialize(name)
     @name = name
-    self.roster= {}
+    @roster= {}
   end
   
-  def add_student=(student, grade)
-    @student = student
-    @grade = grade
-    self.roster["@#{grade}"] = []
-    binding.pry
-    self.roster["@#{grade}"] << "@#{student}"
+  def add_student(name, grade)
+    
+    self.roster[grade] ||= []
+    self.roster[grade] << name 
   end
-  
- def add_student(student, grade)
-   @student
-   @grade
- end
  
-def roster=(roster)
-  @roster = roster
+ def grade(grade)
+   self.roster[grade]
+ end
+
+def sort
+  sort = {}
+  self.roster.each do |grade, student_array|
+    sort[grade] = student_array.sort
+  end
+  sort
 end
- 
- def roster
-   @roster
- end
- 
+
 end
