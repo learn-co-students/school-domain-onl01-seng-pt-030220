@@ -9,8 +9,7 @@ def initialize(name)
 end
 
 def add_student(student_name, grade)
-  roster[grade] ||= []   # ||= if  roster[grade] not exist nil or false(it means it's first item ),then we equal it to array .when we add second items ,array
-                         #already has value ,so not do anything .
+  roster[grade] ||= []   # ||= if  roster[grade] not exist nil or false(first grade ),then create empty array to to put key and value ,if key alreay exist then push it to array
   roster[grade] << student_name
 end
 
